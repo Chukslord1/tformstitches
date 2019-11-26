@@ -216,6 +216,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                </div>
              </ul>
          </li>
+         <li class="dropdown menu__item">
+           <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Children's wear <span class="caret"></span></a>
+             <ul class="dropdown-menu multi-column columns-3">
+               <div class="row">
+                 <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
+                   <a href="children.html"><img src="{% static 'images/Children.jpg' %}" alt=" "/></a>
+                 </div>
+                 <div class="col-sm-3 multi-gd-img">
+                   <ul class="multi-column-dropdown">
+                     <li><a href="children.html">Clothing</a></li>
+                     <li><a href="children.html">Watches</a></li>
+                   </ul>
+                 </div>
+                 <div class="col-sm-3 multi-gd-img">
+                   <ul class="multi-column-dropdown">
+                     <li><a href="children.html">Shirts</a></li>
+                   </ul>
+                 </div>
+                 <div class="clearfix"></div>
+               </div>
+             </ul>
+         </li>
 
          <li class="menu__item">
           <a class="menu__link" href="contact.html">
@@ -254,159 +276,81 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
    </div>
   </div>
-  <!-- //banner-top -->
-  <!-- banner -->
-  <div class="page-head">
-   <div class="container">
-    <h3>
-    ContactS
-    </h3>
-   </div>
-  </div>
-  <!-- //banner -->
-  <!-- contact -->
-  <div class="contact">
-   <div class="container">
-    <div class="contact-grids">
-     <div class="col-md-4 contact-grid text-center animated wow slideInLeft" data-wow-delay=".5s">
-      <div class="contact-grid1">
-       <i aria-hidden="true" class="glyphicon glyphicon-map-marker">
-       </i>
-       <h4>
-        Address
-       </h4>
-       <p>
-        IKOTA COMPLEX,
-        <span>
-         Lagos.
-        </span>
-       </p>
-      </div>
-     </div>
-     <div class="col-md-4 contact-grid text-center animated wow slideInUp" data-wow-delay=".5s">
-      <div class="contact-grid2">
-       <i aria-hidden="true" class="glyphicon glyphicon-earphone">
-       </i>
-       <h4>
-        Call Us
-       </h4>
-       <p>
-        +234 7080701871
-        <span>
-         +234 7080701871
-        </span>
-       </p>
-      </div>
-     </div>
-     <div class="col-md-4 contact-grid text-center animated wow slideInRight" data-wow-delay=".5s">
-      <div class="contact-grid3">
-       <i aria-hidden="true" class="glyphicon glyphicon-envelope">
-       </i>
-       <h4>
-        Email
-       </h4>
-       <p>
-        <a href="mailto:info@example.com">
-         tformstitches@tformstitches.com
-        </a>
-        <span>
-         <a href="mailto:info@example.com">
-          tformstitches@tformstitches.com
-         </a>
-        </span>
-       </p>
-      </div>
-     </div>
-     <div class="clearfix">
-     </div>
-    </div>
-    <div class="map wow fadeInDown animated" data-wow-delay=".5s">
-     <h3 class="tittle">
-      View On Map
-     </h3>
-     <iframe frameborder="0" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2482.432383990807!2d0.028213999961443994!3d51.52362882484525!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1423469959819" style="border:0">
-     </iframe>
-    </div>
-    <h3 class="tittle">
-     Contact Form
-    </h3>
-    <form>
-     <div class="contact-form2">
-      <input onblur="if (this.value == '') {this.value = 'Name';}" onfocus="this.value = '';" required="" type="text" value="Name"/>
-      <input onblur="if (this.value == '') {this.value = 'Email';}" onfocus="this.value = '';" required="" type="email" value="Email"/>
-      <textarea onblur="if (this.value == '') {this.value = 'Message...';}" onfocus="this.value = '';" required="" type="text">Message...</textarea>
-      <input type="submit" value="Submit"/>
-     </div>
-    </form>
-   </div>
-  </div>
-  <!-- //contact -->
-  <!-- //product-nav -->
-  <div class="coupons">
-  	<div class="container">
-  		<div class="coupons-grids text-center">
-  			<div class="col-md-3 coupons-gd">
-  				<h3>Buy your product in a simple way</h3>
-  			</div>
-  			<div class="col-md-3 coupons-gd">
-  				<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-  				<h4>SELECT YOUR ITEM</h4>
-  				<p>Select your items and click on checkout </p>
-  			</div>
-  			<div class="col-md-3 coupons-gd">
-  				<span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
-  				<h4>MAKE PAYMENT</h4>
-  				<p>Fill in your payment info and wait for delivery</p>
-  			</div>
-  			<div class="clearfix"> </div>
-  		</div>
-  	</div>
-  </div>
-  <!-- footer -->
-  <div class="footer">
-  	<div class="container">
-  		<div class="col-md-3 footer-left">
-  			<h2><a href="index.html"><img src="{% static 'images/logo3.jpg' %}" alt=" " /></a></h2>
-  			<p>Tformstitches is a fashion design company that deals on fashion attires for different outings from cooperate wears, traditional attires, costumes for events and  childrens wears.</p>
-  		</div>
-  		<div class="col-md-9 footer-right">
-  			<div class="col-sm-6 newsleft">
-  				<h3>SIGN UP FOR NEWSLETTER !</h3>
-  			</div>
-  			<div class="col-sm-6 newsright">
-  				<form>
-  					<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-  					<input type="submit" value="Submit">
-  				</form>
-  			</div>
-  			<div class="clearfix"></div>
-  			<div class="sign-grds">
-  				<div class="col-md-4 sign-gd">
-  					<h4>Information</h4>
-  					<ul>
-  						<li><a href="index.html">Home</a></li>
-  						<li><a href="mens.html">Men's Wear</a></li>
-  						<li><a href="womens.html">Women's Wear</a></li>
-  						<li><a href="womens.html">Children's Wear</a></li>
-  						<li><a href="contact.html">Contact</a></li>
-  					</ul>
-  				</div>
 
-  				<div class="col-md-4 sign-gd-two">
-  					<h4>Store Information</h4>
-  					<ul>
-  						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : IKOTA COMPLEX, <span>Lagos.</span></li>
-  						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="mailto:tformstitcheso@tformstitches.com">tformstitches@tformstitches.com</a></li>
-  						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : +234 7080701871</li>
-  					</ul>
-  				</div>
+{% block content %}
+<h2> Here is your list of items</h2>
 
-  				<div class="clearfix"></div>
-  			</div>
-  		</div>
-  		<div class="clearfix"></div>
-  	</div>
+{% for Product in Products %}
+
+  {{ Product }}
+
+{% endfor %}
+{% endblock content %}
+
+<div class="coupons">
+  <div class="container">
+    <div class="coupons-grids text-center">
+      <div class="col-md-3 coupons-gd">
+        <h3>Buy your product in a simple way</h3>
+      </div>
+      <div class="col-md-3 coupons-gd">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        <h4>SELECT YOUR ITEM</h4>
+        <p>Select your items and click on checkout </p>
+      </div>
+      <div class="col-md-3 coupons-gd">
+        <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
+        <h4>MAKE PAYMENT</h4>
+        <p>Fill in your payment info and wait for delivery</p>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
   </div>
-  <!-- //login -->
- </body>
+</div>
+<!-- footer -->
+<div class="footer">
+  <div class="container">
+    <div class="col-md-3 footer-left">
+      <h2><a href="index.html"><img src="{% static 'images/logo3.jpg' %}" alt=" " /></a></h2>
+      <p>Tformstitches is a fashion design company that deals on fashion attires for different outings from cooperate wears, traditional attires, costumes for events and  childrens wears.</p>
+    </div>
+    <div class="col-md-9 footer-right">
+      <div class="col-sm-6 newsleft">
+        <h3>SIGN UP FOR NEWSLETTER !</h3>
+      </div>
+      <div class="col-sm-6 newsright">
+        <form>
+          <input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="clearfix"></div>
+      <div class="sign-grds">
+        <div class="col-md-4 sign-gd">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mens.html">Men's Wear</a></li>
+            <li><a href="womens.html">Women's Wear</a></li>
+            <li><a href="womens.html">Children's Wear</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 sign-gd-two">
+          <h4>Store Information</h4>
+          <ul>
+            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : IKOTA COMPLEX, <span>Lagos.</span></li>
+            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="mailto:tformstitcheso@tformstitches.com">tformstitches@tformstitches.com</a></li>
+            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : +234 7080701871</li>
+          </ul>
+        </div>
+
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+</body>
 </html>
