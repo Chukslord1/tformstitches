@@ -12,7 +12,7 @@ def index(request):
 def mens(request):
 
     context = {
-     'Products': Product.objects.all()
+     'Products': Product.objects.all().filter(category ="Men")
     }
 
     return render(request, "mens.html", context)
@@ -28,10 +28,3 @@ def contact(request):
 
 def checkout(request):
     return render(request, "checkout.html")
-
-def product_list(request):
-    context = {
-     'Products': Product.objects.all()
-    }
-
-    return render(request, "product_list.html", context)
