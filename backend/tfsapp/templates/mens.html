@@ -288,6 +288,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <!-- //banner -->
   <!-- mens -->
 {% for Product in Products %}
+
   <div class="single-pro">
    <div class="col-md-3 product-men">
     <div class="men-pro-item simpleCart_shelfItem">
@@ -315,7 +316,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
        <span class="item_price">
         {{ Product.price }}
        </span>
-      
+
       </div>
       <a class="item_add single-item hvr-outline-out button2" href="#">
        Add to cart
@@ -323,7 +324,56 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
      </div>
     </div>
    </div>
+
 {% endfor %}
+<div class="pagination-grid text-right">
+ <ul class="pagination paging">
+  <li>
+   <a aria-label="Previous" href="#">
+    <span aria-hidden="true">
+     Â«
+    </span>
+   </a>
+  </li>
+  <li class="active">
+   <a href="#">
+    1
+    <span class="sr-only">
+     (current)
+    </span>
+   </a>
+  </li>
+  <li>
+   <a href="#">
+    2
+   </a>
+  </li>
+  <li>
+   <a href="#">
+    3
+   </a>
+  </li>
+  <li>
+   <a href="#">
+    4
+   </a>
+  </li>
+  <li>
+   <a href="#">
+    5
+   </a>
+  </li>
+  <li>
+   <a aria-label="Next" href="#">
+    <span aria-hidden="true">
+     Â»
+    </span>
+   </a>
+  </li>
+ </ul>
+</div>
+</div>
+</div>
   <!-- //mens -->
   <!-- //product-nav -->
   <div class="coupons">
