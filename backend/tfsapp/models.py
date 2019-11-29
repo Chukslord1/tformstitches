@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from django.shortcuts import reverse
 
 # Create your models here.
 
@@ -18,9 +19,14 @@ class Product(models.Model):
     category = models.CharField(max_length = 100, choices = sex)
     image_front = models.ImageField()
     image_back = models.ImageField()
+    slug = models.SlugField()
 
     def __str__(self):
         return self.name
+    def get_absolute_url(self):
+        return reverse("tfsapp: Product", kwargs={
+        'slug': self.slug
+        })
 
 class OrderProduct(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)

@@ -13,5 +13,6 @@ urlpatterns = [
     path("checkout.html", views.checkout, name="checkout"),
     path("contact.html", views.contact, name="contact"),
     path("children.html", views.children, name="children"),
+    path("single.html/<slug>/", views.ProductDetailView.as_view(), name="Product"),
 
 ]
