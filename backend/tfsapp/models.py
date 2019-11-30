@@ -8,6 +8,7 @@ from django.shortcuts import reverse
 class Product(models.Model):
     name = models.CharField(max_length= 50)
     price = models.CharField(max_length= 50)
+    discount_price = models.FloatField(blank=True, null=True)
     description = models.TextField(max_length= 500)
     size = models.CharField(max_length= 6)
     sex = (
@@ -20,12 +21,13 @@ class Product(models.Model):
     image_front = models.ImageField()
     image_back = models.ImageField()
     slug = models.SlugField()
+    quantity= models.IntegerField(default=1)
 
     def __str__(self):
         return self.name
     def get_absolute_url(self):
-        return reverse("tfsapp: Product", kwargs={
-        'slug': self.slug
+        return reverse("tfsapp:Product", kwargs={
+            'slug': self.slug
         })
 
 class OrderProduct(models.Model):
@@ -33,7 +35,8 @@ class OrderProduct(models.Model):
 
     def _str_(self):
         return self.name
-
+    quantity= models.IntegerField(default=1)
+    
 class Order(models.Model):
     products = models.ManyToManyField(OrderProduct)
     start_date = models.DateTimeField(auto_now_add=True)

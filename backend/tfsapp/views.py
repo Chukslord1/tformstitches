@@ -1,6 +1,6 @@
-from django.shortcuts import render
-from .models import Product
-from django.views.generic import DetailView
+from django.shortcuts import render, get_object_or_404
+from .models import Product, OrderProduct, Order
+from django.views.generic import ListView, DetailView
 
 # Create your views here.
 
@@ -37,8 +37,16 @@ def single(request):
 
     return render(request, "single.html", context)
 
+class IndexView(ListView):
+    model = Product
+    template_name = "index.html"
 
 
 class ProductDetailView(DetailView):
     model = Product
     template_name = "single.html"
+
+def add_to_cart(request, slug):
+    Products = get_object_or_404(Product, slug=slug)
+    Order_Products = OrderProducts.objects.create(Products=Products)
+    order = Order.objects,filter(ordered=False)

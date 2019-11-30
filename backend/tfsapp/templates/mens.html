@@ -309,13 +309,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
        </div>
        <div class="item-info-product">
         <h4>
-         <a href="{{ Product.get_absolute_url}}">
+         <a href="{{Product.get_absolute_url}}">
           {{ Product.name }}
          </a>
         </h4>
         <div class="info-product-price">
          <span class="item_price">
-          {{ Product.price }}
+          {% if item.discount_price %}
+          {{ Product.discount_price }}
+          {% else %}
+          {{ Product.price}}
+          {% endif %}
          </span>
 
         </div>

@@ -455,19 +455,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <img class="img-responsive" data-imagezoom="true" src="{{ Product.image_front.url }}"/>
          </div>
         </li>
-        <li data-thumb="{{ Product.image_back.url }}">
+        <li data-thumb="{{ object.image_back.url }}">
          <div class="thumb-image">
-          <img class="img-responsive" data-imagezoom="true" src="{{ Product.image_back.url }}"/>
+          <img class="img-responsive" data-imagezoom="true" src="{{ object.image_back.url }}"/>
          </div>
         </li>
-        <li data-thumb="{{ Product.image_front.url }}">
+        <li data-thumb="{{ object.image_front.url }}">
          <div class="thumb-image">
-          <img class="img-responsive" data-imagezoom="true" src="{{ Product.image_front.url }}"/>
+          <img class="img-responsive" data-imagezoom="true" src="{{ object.image_front.url }}"/>
          </div>
         </li>
-        <li data-thumb="{{ Product.image_back.url }}">
+        <li data-thumb="{{ object.image_back.url }}">
          <div class="thumb-image">
-          <img class="img-responsive" data-imagezoom="true" src="{{ Product.image_back.url }}"/>
+          <img class="img-responsive" data-imagezoom="true" src="{{ object.image_back.url }}"/>
          </div>
         </li>
        </ul>
@@ -478,14 +478,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     <div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
      <h3>
-      {{Product.name}}
+      {{object.name}}
      </h3>
      <p>
       <span class="item_price">
-       $550
+       {{object.discount_price}}
       </span>
       <del>
-       - $900
+       {{object.price}}
       </del>
      </p>
      <div class="rating1">
@@ -512,65 +512,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
        </label>
       </span>
      </div>
-     <div class="description">
-      <h5>
-       Check delivery, payment options and charges at your location
-      </h5>
-      <input onblur="if (this.value == '') {this.value = 'Enter pincode';}" onfocus="this.value = '';" required="" type="text" value="Enter pincode"/>
-      <input type="submit" value="Check"/>
-     </div>
-     <div class="color-quality">
-      <div class="color-quality-right">
-       <h5>
-        Quality :
-       </h5>
-       <select class="frm-field required sect" id="country1" onchange="change_country(this.value)">
-        <option value="null">
-         5 Qty
-        </option>
-        <option value="null">
-         6 Qty
-        </option>
-        <option value="null">
-         7 Qty
-        </option>
-        <option value="null">
-         10 Qty
-        </option>
-       </select>
-      </div>
-     </div>
-     <div class="occasional">
-      <h5>
-       Types :
-      </h5>
-      <div class="colr ert">
-       <label class="radio">
-        <input checked="" name="radio" type="radio"/>
-        <i>
-        </i>
-        Casual Shoes
-       </label>
-      </div>
-      <div class="colr">
-       <label class="radio">
-        <input name="radio" type="radio"/>
-        <i>
-        </i>
-        Sports Shoes
-       </label>
-      </div>
-      <div class="colr">
-       <label class="radio">
-        <input name="radio" type="radio"/>
-        <i>
-        </i>
-        Formal Shoes
-       </label>
-      </div>
-      <div class="clearfix">
-      </div>
-     </div>
+
+
      <div class="occasion-cart">
       <a class="item_add hvr-outline-out button2" href="#">
        Add to cart
@@ -587,28 +530,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
          Description
         </a>
        </li>
-       <li role="presentation">
-        <a aria-controls="profile" data-toggle="tab" href="#profile" id="profile-tab" role="tab">
-         Reviews(1)
-        </a>
-       </li>
-       <li class="dropdown" role="presentation">
-        <a aria-controls="myTabDrop1-contents" class="dropdown-toggle" data-toggle="dropdown" href="#" id="myTabDrop1">
-         Information
-         <span class="caret">
-         </span>
-        </a>
-        <ul aria-labelledby="myTabDrop1" class="dropdown-menu" id="myTabDrop1-contents" role="menu">
-         <li>
-          <a aria-controls="dropdown1" data-toggle="tab" href="#dropdown1" id="dropdown1-tab" role="tab" tabindex="-1">
-           cleanse
-          </a>
-         </li>
-         <li>
-          <a aria-controls="dropdown2" data-toggle="tab" href="#dropdown2" id="dropdown2-tab" role="tab" tabindex="-1">
-           fanny
-          </a>
-         </li>
+
         </ul>
        </li>
       </ul>
@@ -618,65 +540,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
          Product Brief Description
         </h5>
         <p>
-         Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
-         <span>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-         </span>
+         {{object.description}}
         </p>
        </div>
-       <div aria-labelledby="profile-tab" class="tab-pane fade bootstrap-tab-text" id="profile" role="tabpanel">
-        <div class="bootstrap-tab-text-grids">
-         <div class="bootstrap-tab-text-grid">
-          <div class="bootstrap-tab-text-grid-left">
-           <img alt=" " class="img-responsive" src="{% static 'images/men3.jpg' %}"/>
-          </div>
-          <div class="bootstrap-tab-text-grid-right">
-           <ul>
-            <li>
-             <a href="#">
-              Admin
-             </a>
-            </li>
-            <li>
-             <a href="#">
-              <span aria-hidden="true" class="glyphicon glyphicon-share">
-              </span>
-              Reply
-             </a>
-            </li>
-           </ul>
-           <p>
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-												suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-												vel eum iure reprehenderit.
-           </p>
-          </div>
-          <div class="clearfix">
-          </div>
-         </div>
-         <div class="add-review">
-          <h4>
-           add a review
-          </h4>
-          <form>
-           <input onblur="if (this.value == '') {this.value = 'Name';}" onfocus="this.value = '';" required="" type="text" value="Name"/>
-           <input onblur="if (this.value == '') {this.value = 'Email';}" onfocus="this.value = '';" required="" type="email" value="Email"/>
-           <textarea onblur="if (this.value == '') {this.value = 'Message...';}" onfocus="this.value = '';" required="" type="text">Message...</textarea>
-           <input type="submit" value="SEND"/>
-          </form>
-         </div>
-        </div>
-       </div>
-       <div aria-labelledby="dropdown1-tab" class="tab-pane fade bootstrap-tab-text" id="dropdown1" role="tabpanel">
-        <p>
-         Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
-        </p>
-       </div>
-       <div aria-labelledby="dropdown2-tab" class="tab-pane fade bootstrap-tab-text" id="dropdown2" role="tabpanel">
-        <p>
-         Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.
-        </p>
-       </div>
+
       </div>
      </div>
     </div>
