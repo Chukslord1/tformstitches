@@ -5,7 +5,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib.staticfiles.urls import static
 
 urlpatterns = [
-    path("", include("tfsapp.urls", namespace="tfsapp")),
+    path("", include("tfsapp.urls"),name="tfsapp"),
     path('admin/', admin.site.urls),
 ]
 

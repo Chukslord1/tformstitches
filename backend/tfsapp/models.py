@@ -2,6 +2,9 @@ from django.db import models
 from datetime import datetime
 from django.shortcuts import reverse
 
+from tfsapp.utils import unique_slug_generator
+from django.db.models.signals import pre_save
+
 # Create your models here.
 
 
@@ -20,7 +23,7 @@ class Product(models.Model):
     category = models.CharField(max_length = 100, choices = sex)
     image_front = models.ImageField()
     image_back = models.ImageField()
-    slug = models.SlugField()
+    slug = models.SlugField(null=True, blank=True)
     quantity= models.IntegerField(default=1)
 
     def __str__(self):
@@ -29,6 +32,12 @@ class Product(models.Model):
         return reverse("tfsapp:Product", kwargs={
             'slug': self.slug
         })
+
+def slug_save(sender, instance,*args, **kwargs):
+    if not instance.slug:
+        instance.slug = unique_slug_generator(instance, instance.name, instance.slug)
+
+pre_save.connect(slug_save, sender=Product)
 
 class OrderProduct(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)

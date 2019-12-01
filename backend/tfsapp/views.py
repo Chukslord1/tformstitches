@@ -30,9 +30,10 @@ def contact(request):
 def checkout(request):
     return render(request, "checkout.html")
 
-def single(request):
+def single(request, slug_text):
+    product = get_object_or_404(Product, slug=slug_text)
     context = {
-     'Products': Product.objects.all()
+     'product': product,
     }
 
     return render(request, "single.html", context)
@@ -40,6 +41,7 @@ def single(request):
 class IndexView(ListView):
     model = Product
     template_name = "index.html"
+    context_object_name = "items"
 
 
 class ProductDetailView(DetailView):

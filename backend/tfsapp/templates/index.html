@@ -185,14 +185,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="top_nav_right">
 			<div class="cart box_1">
-						<a href="checkout.html">
+						<a href="{% url 'checkout' %}">
 							<h3> <div class="total">
 								<i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
 								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
 
 							</h3>
 						</a>
-						<p><a href="{% static 'javascript:;' %}" class="simpleCart_empty">Empty Cart</a></p>
+						<p><a href="#" class="simpleCart_empty">Empty Cart</a></p>
 
 			</div>
 		</div>
@@ -251,16 +251,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<h3><span>new </span>arrivals</h3>
 		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
-		<div class="new_grids">
-			<div class="col-md-4 new-gd-left">
-				<img src="{% static 'images/wed1.jpg' %}" alt=" " />
+		<div class="new_grids row">
+			
+			{% for item in items %}
+				<div class="col-md-4 new-gd-left">
+				<img src="{{item.image_front.url}}" alt=" " />
 				<div class="wed-brand simpleCart_shelfItem">
-					<h4>Wedding Collections</h4>
+					<h4>{{item.name}}</h4>
 					<h5>Flat 50% Discount</h5>
-					<p><i>$250</i> <span class="item_price">$500</span><a class="item_add hvr-outline-out button2" href="#">add to cart </a></p>
+					<p><i>$250</i> <span class="item_price">{{item.price}}</span><a class="item_add hvr-outline-out button2" href="#">add to cart </a></p>
+					<a href="{% url 'product' item.slug %}">CHECK PRODUCT</a>
 				</div>
 			</div>
-			<div class="col-md-4 new-gd-middle">
+			{% endfor %}
+				
+			
+			<!-- <div class="col-md-4 new-gd-middle">
 				<div class="new-levis">
 					<div class="mid-img">
 						<img src="{% static 'images/levis1.png' %}" alt=" " />
@@ -290,7 +296,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<p>Shop Men</p>
 				</div>
 			</div>
-			<div class="clearfix"></div>
+			<div class="clearfix"></div> -->
 		</div>
 	</div>
 </div>
@@ -298,7 +304,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- content-bottom -->
 
-<div class="content-bottom">
+<!-- <div class="content-bottom">
 	<div class="col-md-7 content-lgrid">
 		<div class="col-sm-6 content-img-left text-center">
 			<div class="content-grid-effect slow-zoom vertical">
@@ -352,7 +358,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 	</div>
 	<div class="clearfix"></div>
-</div>
+</div> -->
 <!-- //content-bottom -->
 <!-- product-nav -->
 
