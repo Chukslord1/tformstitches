@@ -3,7 +3,7 @@ from django.conf.urls.static import static
 from django.urls import path, include
 from . import views
 
-app_name = "tfsapp"
+# app_name = "tfsapp"
 
 urlpatterns = [
     path("", views.IndexView.as_view(), name="index"),
